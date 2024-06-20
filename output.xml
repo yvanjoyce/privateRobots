@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.9 on win32)" generated="2024-06-21T06:58:28.519638" rpa="false" schemaversion="5">
+<suite id="s1" name="Delete" source="C:\Users\Yvan\PycharmProjects\RobotFrameworkProject\Automation\delete.robot">
+<test id="s1-t1" name="Deleting BL" line="36">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:28.745722" level="INFO">Opening browser 'chrome' to base url 'https://tools.brightlocal.com/seo-tools/admin/login?redirect_url=%252Fseo-tools%252Fadmin%252Flsrc%253F&amp;redirect_source=access_control'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-21T06:58:28.745722" elapsed="3.306829"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-21T06:58:32.053612" elapsed="0.047008"/>
+</kw>
+<kw name="Perform Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:32.102621" level="INFO">Typing text 'mariel.mojares@ollyolly.com' into text field 'xpath=/html/body/div[1]/div/div[1]/form/input[1]'.</msg>
+<arg>xpath=/html/body/div[1]/div/div[1]/form/input[1]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:32.102621" elapsed="4.894472"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:36.998112" level="INFO">Typing text '76230e7c' into text field 'xpath=/html/body/div[1]/div/div[1]/form/input[2]'.</msg>
+<arg>xpath=/html/body/div[1]/div/div[1]/form/input[2]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:36.998112" elapsed="0.122193"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:37.121331" level="INFO">Clicking button 'xpath=/html/body/div[1]/div/div[1]/form/div[2]/button'.</msg>
+<arg>xpath=/html/body/div[1]/div/div[1]/form/div[2]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:37.121331" elapsed="0.103784"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T06:58:37.226115" elapsed="3.971012"/>
+</kw>
+<status status="PASS" start="2024-06-21T06:58:32.101620" elapsed="9.096542"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:41.198162" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:41.198162" elapsed="2.148061"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:58:43.347250" elapsed="1.256569"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:44.603819" level="INFO">Typing text 'Guy Jones, Inc.' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:44.603819" elapsed="0.250787"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:44.855673" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:44.854606" elapsed="0.283193"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:58:48.138962" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:58:45.137799" elapsed="3.001163"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:58:48.138962" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:58:48.138962" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<doc>Search Company</doc>
+<status status="PASS" start="2024-06-21T06:58:43.347250" elapsed="4.791712"/>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:58:43.347250" elapsed="4.791712"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete BL">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:58:48.139990" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:58:48.139990" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:48.140990" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:48.139990" elapsed="0.087789"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:48.227779" level="INFO">Clicking element 'xpath=//div[contains(@class, 'dropdown-menu')]/ul/li[contains(text(), 'Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:48.227779" elapsed="0.075930"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:48.304715" level="INFO">Typing text 'PERMANENTLY DELETE' into text field 'xpath= /html/body/div[10]/div[2]/div[4]/input'.</msg>
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:48.303709" elapsed="0.170843"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:58:49.976181" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:58:48.475596" elapsed="1.500585"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T06:58:49.976688" elapsed="0.021404"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:49.998092" level="INFO">Clicking button 'xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:49.998092" elapsed="0.144664"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:58:55.144070" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:58:50.143835" elapsed="5.000235"/>
+</kw>
+<arg>${company}</arg>
+<doc>deleting</doc>
+<status status="PASS" start="2024-06-21T06:58:48.139990" elapsed="7.004080"/>
+</kw>
+<arg>Delete BL</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:58:48.138962" elapsed="7.005108"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:55.161789" level="INFO">Element 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' is displayed.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.144070" elapsed="0.017719"/>
+</kw>
+<msg time="2024-06-21T06:58:55.161789" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.144070" elapsed="0.017719"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:55.162293" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.162293" elapsed="0.052087"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.161789" elapsed="0.052591"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:55.215648" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.215648" elapsed="0.047917"/>
+</kw>
+<var name="${company}">Guy Jones, Inc.</var>
+<status status="PASS" start="2024-06-21T06:58:43.346223" elapsed="11.917342"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.264597" elapsed="0.021010"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:55.286623" level="INFO">Typing text 'Penn Flooring &amp; Restoration' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.285607" elapsed="0.165690"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:55.451297" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.451297" elapsed="0.082452"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:58:58.535341" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.533749" elapsed="3.001592"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:58:58.535847" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:58:58.535341" elapsed="0.000506"/>
+</kw>
+<arg>${company}</arg>
+<doc>Search Company</doc>
+<status status="PASS" start="2024-06-21T06:58:55.264597" elapsed="3.271250"/>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:58:55.263565" elapsed="3.272282"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete BL">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:58:58.535847" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:58:58.535847" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:58.536850" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:58.536850" elapsed="0.061957"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:58.599871" level="INFO">Clicking element 'xpath=//div[contains(@class, 'dropdown-menu')]/ul/li[contains(text(), 'Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:58.599871" elapsed="0.055935"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:58:58.655806" level="INFO">Typing text 'PERMANENTLY DELETE' into text field 'xpath= /html/body/div[10]/div[2]/div[4]/input'.</msg>
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:58:58.655806" elapsed="0.116589"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:00.273891" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:58:58.772395" elapsed="1.501496"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T06:59:00.273891" elapsed="0.006700"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:00.280591" level="INFO">Clicking button 'xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:00.280591" elapsed="0.067345"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:05.349589" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:00.349162" elapsed="5.000427"/>
+</kw>
+<arg>${company}</arg>
+<doc>deleting</doc>
+<status status="PASS" start="2024-06-21T06:58:58.535847" elapsed="6.813742"/>
+</kw>
+<arg>Delete BL</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:58:58.535847" elapsed="6.813742"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:05.363641" level="INFO">Element 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' is displayed.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.349589" elapsed="0.014052"/>
+</kw>
+<msg time="2024-06-21T06:59:05.363641" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.349589" elapsed="0.014052"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:05.364716" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.364716" elapsed="0.042276"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.364716" elapsed="0.042276"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:05.406992" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.406992" elapsed="0.053983"/>
+</kw>
+<var name="${company}">Penn Flooring &amp; Restoration</var>
+<status status="PASS" start="2024-06-21T06:58:55.263565" elapsed="10.197410"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.462481" elapsed="0.015150"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:05.478637" level="INFO">Typing text 'Water Works, LLC' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.478637" elapsed="0.151008"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:05.630764" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.629645" elapsed="0.083658"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:08.713777" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.713303" elapsed="3.000474"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:08.713777" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:08.713777" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<doc>Search Company</doc>
+<status status="PASS" start="2024-06-21T06:59:05.462481" elapsed="3.251296"/>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:05.460975" elapsed="3.252802"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete BL">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:08.714795" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:08.714795" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:08.714795" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:08.714795" elapsed="0.065580"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:08.780375" level="INFO">Clicking element 'xpath=//div[contains(@class, 'dropdown-menu')]/ul/li[contains(text(), 'Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:08.780375" elapsed="0.058920"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:08.840295" level="INFO">Typing text 'PERMANENTLY DELETE' into text field 'xpath= /html/body/div[10]/div[2]/div[4]/input'.</msg>
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:08.839295" elapsed="0.158116"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:10.497914" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:08.997411" elapsed="1.500503"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T06:59:10.497914" elapsed="0.010660"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:10.508574" level="INFO">Clicking button 'xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:10.508574" elapsed="0.063109"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:15.571900" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:10.571683" elapsed="5.000217"/>
+</kw>
+<arg>${company}</arg>
+<doc>deleting</doc>
+<status status="PASS" start="2024-06-21T06:59:08.713777" elapsed="6.858123"/>
+</kw>
+<arg>Delete BL</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:08.713777" elapsed="6.858628"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:15.587874" level="INFO">Element 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' is displayed.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.572405" elapsed="0.015469"/>
+</kw>
+<msg time="2024-06-21T06:59:15.587874" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.572405" elapsed="0.015469"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:15.587874" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.587874" elapsed="0.047097"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.587874" elapsed="0.047097"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:15.634971" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.634971" elapsed="0.044041"/>
+</kw>
+<var name="${company}">Water Works, LLC</var>
+<status status="PASS" start="2024-06-21T06:59:05.460975" elapsed="10.218037"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.680045" elapsed="0.016494"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:15.696539" level="INFO">Typing text 'Willow River Well &amp; Pump Service' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.696539" elapsed="0.185738"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:15.882277" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.882277" elapsed="0.107604"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:18.991422" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.989881" elapsed="3.001541"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:18.991422" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:18.991422" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<doc>Search Company</doc>
+<status status="PASS" start="2024-06-21T06:59:15.680045" elapsed="3.311377"/>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:15.680045" elapsed="3.311377"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete BL">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:18.992942" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:18.992942" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:18.992942" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:18.992942" elapsed="0.065374"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:19.058316" level="INFO">Clicking element 'xpath=//div[contains(@class, 'dropdown-menu')]/ul/li[contains(text(), 'Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:19.058316" elapsed="0.055234"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:19.113550" level="INFO">Typing text 'PERMANENTLY DELETE' into text field 'xpath= /html/body/div[10]/div[2]/div[4]/input'.</msg>
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:19.113550" elapsed="0.132697"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:20.746706" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:19.246247" elapsed="1.500459"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T06:59:20.746706" elapsed="0.008762"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:20.755468" level="INFO">Clicking button 'xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:20.755468" elapsed="0.062301"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:25.818280" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:20.817769" elapsed="5.000511"/>
+</kw>
+<arg>${company}</arg>
+<doc>deleting</doc>
+<status status="PASS" start="2024-06-21T06:59:18.992942" elapsed="6.825338"/>
+</kw>
+<arg>Delete BL</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:18.992430" elapsed="6.825850"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:25.833978" level="INFO">Element 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' is displayed.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:25.818280" elapsed="0.015698"/>
+</kw>
+<msg time="2024-06-21T06:59:25.833978" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-21T06:59:25.818280" elapsed="0.015698"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:25.833978" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:25.833978" elapsed="0.043750"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T06:59:25.833978" elapsed="0.043750"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:25.878726" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:25.877728" elapsed="0.047352"/>
+</kw>
+<var name="${company}">Willow River Well &amp; Pump Service</var>
+<status status="PASS" start="2024-06-21T06:59:15.680045" elapsed="10.245035"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:25.926101" elapsed="0.016488"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:25.942589" level="INFO">Typing text 'Triangle Custom Curbing, LLC' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:25.942589" elapsed="0.174087"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:26.117715" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:26.116676" elapsed="0.081634"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:29.199856" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:26.199329" elapsed="3.000527"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:29.199856" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:29.199856" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<doc>Search Company</doc>
+<status status="PASS" start="2024-06-21T06:59:25.926101" elapsed="3.273755"/>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:25.925080" elapsed="3.274776"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete BL">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:29.201169" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:29.201169" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:29.201169" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:29.201169" elapsed="0.060236"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:29.262408" level="INFO">Clicking element 'xpath=//div[contains(@class, 'dropdown-menu')]/ul/li[contains(text(), 'Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:29.261405" elapsed="0.052426"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:29.313831" level="INFO">Typing text 'PERMANENTLY DELETE' into text field 'xpath= /html/body/div[10]/div[2]/div[4]/input'.</msg>
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:29.313831" elapsed="0.135462"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:30.949562" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:29.449293" elapsed="1.500269"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T06:59:30.949562" elapsed="0.007692"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:30.957254" level="INFO">Clicking button 'xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:30.957254" elapsed="0.066434"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:36.025366" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:31.025088" elapsed="5.000278"/>
+</kw>
+<arg>${company}</arg>
+<doc>deleting</doc>
+<status status="PASS" start="2024-06-21T06:59:29.199856" elapsed="6.825510"/>
+</kw>
+<arg>Delete BL</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:29.199856" elapsed="6.825510"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:36.038794" level="INFO">Element 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' is displayed.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.025366" elapsed="0.013428"/>
+</kw>
+<msg time="2024-06-21T06:59:36.038794" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.025366" elapsed="0.013428"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:36.039826" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.039826" elapsed="0.040709"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.039826" elapsed="0.040709"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:36.080535" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.080535" elapsed="0.046101"/>
+</kw>
+<var name="${company}">Triangle Custom Curbing, LLC</var>
+<status status="PASS" start="2024-06-21T06:59:25.925080" elapsed="10.201556"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.128693" elapsed="0.015332"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:36.145072" level="INFO">Typing text 'CLK Builders, Inc.' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.145072" elapsed="0.126396"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:36.272471" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.271468" elapsed="0.094529"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:39.366123" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.365997" elapsed="3.000126"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:39.366123" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:39.366123" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<doc>Search Company</doc>
+<status status="PASS" start="2024-06-21T06:59:36.127658" elapsed="3.238465"/>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:36.127658" elapsed="3.238465"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete BL">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:39.367141" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:39.367141" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:39.368142" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:39.368142" elapsed="0.078803"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:39.447985" level="INFO">Clicking element 'xpath=//div[contains(@class, 'dropdown-menu')]/ul/li[contains(text(), 'Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:39.447985" elapsed="0.051226"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:39.499211" level="INFO">Typing text 'PERMANENTLY DELETE' into text field 'xpath= /html/body/div[10]/div[2]/div[4]/input'.</msg>
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:39.499211" elapsed="0.135666"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:41.135406" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:39.634877" elapsed="1.500529"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T06:59:41.135406" elapsed="0.007908"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:41.143314" level="INFO">Clicking button 'xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:41.143314" elapsed="0.063601"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:46.207180" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:41.206915" elapsed="5.000265"/>
+</kw>
+<arg>${company}</arg>
+<doc>deleting</doc>
+<status status="PASS" start="2024-06-21T06:59:39.367141" elapsed="6.840039"/>
+</kw>
+<arg>Delete BL</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:39.367141" elapsed="6.840039"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:46.232428" level="INFO">Element 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' is displayed.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.207180" elapsed="0.025756"/>
+</kw>
+<msg time="2024-06-21T06:59:46.232936" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.207180" elapsed="0.025756"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:46.235160" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.235160" elapsed="0.065257"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.232936" elapsed="0.067481"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:46.301423" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.300417" elapsed="0.056534"/>
+</kw>
+<var name="${company}">CLK Builders, Inc.</var>
+<status status="PASS" start="2024-06-21T06:59:36.126636" elapsed="10.231332"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.358968" elapsed="0.021775"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:46.380743" level="INFO">Typing text 'L&amp;M Electric LLC' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.380743" elapsed="0.164724"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:46.546950" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.546950" elapsed="0.095693"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:49.642926" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.642643" elapsed="3.000283"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:49.642926" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:49.642926" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<doc>Search Company</doc>
+<status status="PASS" start="2024-06-21T06:59:46.358968" elapsed="3.283958"/>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:46.357968" elapsed="3.284958"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete BL">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:49.643944" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:49.642926" elapsed="0.001018"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:49.643944" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:49.643944" elapsed="0.056820"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:49.700764" level="INFO">Clicking element 'xpath=//div[contains(@class, 'dropdown-menu')]/ul/li[contains(text(), 'Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:49.700764" elapsed="0.058508"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:49.760313" level="INFO">Typing text 'PERMANENTLY DELETE' into text field 'xpath= /html/body/div[10]/div[2]/div[4]/input'.</msg>
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:49.759272" elapsed="0.145309"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:51.405958" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:49.905601" elapsed="1.500357"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T06:59:51.405958" elapsed="0.006632"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:51.414044" level="INFO">Clicking button 'xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:51.414044" elapsed="0.056697"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:56.472616" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:51.470741" elapsed="5.001875"/>
+</kw>
+<arg>${company}</arg>
+<doc>deleting</doc>
+<status status="PASS" start="2024-06-21T06:59:49.642926" elapsed="6.829690"/>
+</kw>
+<arg>Delete BL</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:49.642926" elapsed="6.829690"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:56.486387" level="INFO">Element 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' is displayed.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.472616" elapsed="0.013771"/>
+</kw>
+<msg time="2024-06-21T06:59:56.486387" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.472616" elapsed="0.013771"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:56.487401" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.486387" elapsed="0.041859"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.486387" elapsed="0.041859"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:56.529250" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.528246" elapsed="0.042754"/>
+</kw>
+<var name="${company}">L&amp;M Electric LLC</var>
+<status status="PASS" start="2024-06-21T06:59:46.357968" elapsed="10.213032"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.571000" elapsed="0.013615"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:56.585615" level="INFO">Typing text 'Uno Roofing' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.585615" elapsed="0.121330"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:56.706945" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.706945" elapsed="0.086086"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T06:59:59.794104" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.794037" elapsed="3.000067"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:59.794104" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:59.794104" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<doc>Search Company</doc>
+<status status="PASS" start="2024-06-21T06:59:56.571000" elapsed="3.223104"/>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:56.571000" elapsed="3.223104"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete BL">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T06:59:59.794104" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T06:59:59.794104" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:59.795274" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:59.795274" elapsed="0.053487"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:59.849862" level="INFO">Clicking element 'xpath=//div[contains(@class, 'dropdown-menu')]/ul/li[contains(text(), 'Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:59.848761" elapsed="0.052155"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T06:59:59.900916" level="INFO">Typing text 'PERMANENTLY DELETE' into text field 'xpath= /html/body/div[10]/div[2]/div[4]/input'.</msg>
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T06:59:59.900916" elapsed="0.120255"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T07:00:01.522492" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T07:00:00.021171" elapsed="1.501321"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-21T07:00:01.522492" elapsed="0.008686"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T07:00:01.531178" level="INFO">Clicking button 'xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]'.</msg>
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T07:00:01.531178" elapsed="0.055488"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-21T07:00:06.586803" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-21T07:00:01.586666" elapsed="5.000137"/>
+</kw>
+<arg>${company}</arg>
+<doc>deleting</doc>
+<status status="PASS" start="2024-06-21T06:59:59.794104" elapsed="6.792699"/>
+</kw>
+<arg>Delete BL</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-21T06:59:59.794104" elapsed="6.792699"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-21T07:00:06.603325" level="INFO">Element 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' is displayed.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-21T07:00:06.587309" elapsed="0.016016"/>
+</kw>
+<msg time="2024-06-21T07:00:06.603325" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-21T07:00:06.587309" elapsed="0.016016"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T07:00:06.603325" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T07:00:06.603325" elapsed="0.039036"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-21T07:00:06.603325" elapsed="0.039036"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-21T07:00:06.642866" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T07:00:06.642361" elapsed="0.041112"/>
+</kw>
+<var name="${company}">Uno Roofing</var>
+<status status="PASS" start="2024-06-21T06:59:56.571000" elapsed="10.112473"/>
+</iter>
+<var>${company}</var>
+<value>@{company_list}</value>
+<status status="PASS" start="2024-06-21T06:58:43.346223" elapsed="83.337250"/>
+</for>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-06-21T07:00:06.684492" elapsed="0.094057"/>
+</kw>
+<status status="PASS" start="2024-06-21T06:58:28.744697" elapsed="98.034914"/>
+</test>
+<status status="PASS" start="2024-06-21T06:58:28.520654" elapsed="98.260470"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Delete">Delete</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-21T06:58:28.515405" level="WARN">Error in file 'C:\Users\Yvan\PycharmProjects\RobotFrameworkProject\Automation\delete.robot' on line 76: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
